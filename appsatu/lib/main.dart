@@ -227,6 +227,65 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ],
                 ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    textDirection: TextDirection.ltr,
+                    children: [
+                      Expanded(
+                        child: Text("Name"),
+                      ),
+                      Expanded(
+                        child: Text("Student ID"),
+                      ),
+                      Expanded(
+                        child: Text("Program ID"),
+                      ),
+                      Expanded(
+                        child: Text("GPA"),
+                      ),
+                    ],
+                  ),
+                ),
+                StreamBuilder(
+                  stream: FirebaseFirestore.instance
+                      .collection("MyStudent")
+                      .snapshots(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      return ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: snapshot.data.documents.length,
+                        itemBuilder: (context, index) {
+                          DocumentSnapshot documentSnapshot =
+                              snapshot.data.documents[index];
+                          return Row(
+                            children: [
+                              Expanded(
+                                child: Text(documentSnapshot["studentName"]),
+                              ),
+                              Expanded(
+                                child: Text(documentSnapshot["studentID"]),
+                              ),
+                              Expanded(
+                                child: Text(documentSnapshot["studyProgramID"]),
+                              ),
+                              Expanded(
+                                child: Text(
+                                    documentSnapshot["studentGPA"].toString()),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    } else {
+                      return Align(
+                        alignment: FractionalOffset.bottomCenter,
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  },
+                ),
               ],
             ),
             Align(
