@@ -10,7 +10,7 @@ class MainPage extends StatelessWidget {
           color: Colors.white,
         ),
         title: Text(
-          "My Flutter Web",
+          "My Flutter App",
           style: TextStyle(color: Colors.white),
         ),
         actions: [
@@ -66,7 +66,7 @@ class MainPage extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: MediaQuery.of(context).size.height * 0.35,
+                          height: MediaQuery.of(context).size.height * 0.4,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(4),
@@ -76,7 +76,7 @@ class MainPage extends StatelessWidget {
                               image: NetworkImage(
                                 "https://i.ibb.co/PY7pqMS/IMG-20191214-221324.jpg",
                               ),
-                              fit: BoxFit.contain,
+                              fit: BoxFit.fitWidth,
                               repeat: ImageRepeat.repeat,
                             ),
                           ),
@@ -91,11 +91,18 @@ class MainPage extends StatelessWidget {
                             child: Column(
                               children: [
                                 Text(
-                                  "beautiful sakura at japan ",
+                                  "IKHSAN NUR",
                                   maxLines: 2,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Color(0xFFF56D5D), fontSize: 25),
+                                ),
+                                Text(
+                                  "0110218013",
+                                  maxLines: 2,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: Color(0xFFF56D5D), fontSize: 15),
                                 ),
                                 Container(
                                   margin: EdgeInsets.fromLTRB(0, 20, 0, 15),
@@ -110,7 +117,7 @@ class MainPage extends StatelessWidget {
                                             color: Colors.grey, fontSize: 12),
                                       ),
                                       Text(
-                                        "September 12, 2024",
+                                        "September 20, 2020",
                                         maxLines: 2,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(

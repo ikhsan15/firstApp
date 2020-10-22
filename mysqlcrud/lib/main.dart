@@ -8,16 +8,16 @@ import 'package:mysqlcrud/detail.dart';
 void main() {
   runApp(new MaterialApp(
     title: "my store",
-    home: new MyApp(),
+    home: new Home(),
   ));
 }
 
-class MyApp extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _HomeState createState() => _HomeState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _HomeState extends State<Home> {
   Future<List> getData() async {
     final response =
         await http.get("http://200.10.11.112/mysqlcrud/getdata.php");
@@ -74,7 +74,9 @@ class ItemList extends StatelessWidget {
             ),
             child: new Card(
               child: new ListTile(
-                title: new Text(list[i]['item_name']),
+                title: new Text(
+                  list[i]['item_name'],
+                ),
                 leading: new Icon(Icons.widgets),
                 subtitle: new Text("Stock : ${list[i]['stock']}"),
               ),

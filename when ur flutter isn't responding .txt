@@ -1,0 +1,54 @@
+flutter doctor -v
+flutter clean
+flutter upgrade
+flutter config --enable-web
+flutter channel master
+===========================================================================================================================
+===========================================================================================================================
+jika error 
+
+Launching lib\main.dart on Chrome in debug mode... 
+Failed to establish connection with the application instance in Chrome.
+This can happen if the websocket connection used by the web tooling is unable to correctly establish a connection,
+for example due to a firewall.
+Exited (sigterm)
+
+flutter run -d chrome --release
+===========================================================================================================================
+===========================================================================================================================
+npm install -g firebase-tools
+firebase login
+firebase init
+firebase deploy
+
+===========================================================================================================================
+===========================================================================================================================
+
+HOSTING
+==================
+flutter build web
+flutter run -d chrome --release
+node -v
+npm -v
+npm install -g firebase-tools
+firebase login
+firebase init
+firebase deploy
+
+    Client ID Anda
+        634051518038-7nvf262j608bbap1hnersd67n1efbtuv.apps.googleusercontent.com
+
+    Rahasia Klien Anda
+        CJEiUea8oxhT5K03b7-3Zbam
+
+http://localhost:54870
+
+flutter run -d chrome --web-hostname localhost --web-port 7357
+===========================================================================================================================
+===========================================================================================================================
+
+
+
+
+
+myfluttercollege-3f7c9
