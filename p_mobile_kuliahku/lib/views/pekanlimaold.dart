@@ -20,14 +20,15 @@ class Pekanlimaold extends StatelessWidget {
         ],
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Color(0xff0096ff), Color(0xff6610f2)],
-                  begin: FractionalOffset.topLeft,
-                  end: FractionalOffset.bottomRight),
-              image: DecorationImage(
-                  image: AssetImage("assets/images/pattern.jpg"),
-                  fit: BoxFit.none,
-                  repeat: ImageRepeat.repeat)),
+            gradient: LinearGradient(
+                colors: [Color(0xff0096ff), Color(0xff6610f2)],
+                begin: FractionalOffset.topLeft,
+                end: FractionalOffset.bottomRight),
+            image: DecorationImage(
+                image: AssetImage("assets/images/pattern.jpg"),
+                fit: BoxFit.none,
+                repeat: ImageRepeat.repeat),
+          ),
         ),
       ),
       body: Stack(
@@ -164,3 +165,29 @@ class Pekanlimaold extends StatelessWidget {
 //   ],
 // ),
 // ),
+
+//   return MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home: Scaffold(
+//       appBar: PreferredSize(
+//         preferredSize: Size.fromHeight(200),
+//         child: AppBar(
+//           backgroundColor: Colors.amber,
+//           flexibleSpace: Positioned(
+//             bottom: 0,
+//             right: 0,
+//             child: Container(
+//               margin: EdgeInsets.all(20),
+//               child: Text(
+//                 "My Flutter Web",
+//                 style: TextStyle(
+//                     fontSize: 20,
+//                     color: Colors.white,
+//                     fontWeight: FontWeight.w700),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
