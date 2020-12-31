@@ -1,11 +1,20 @@
+install flutter web on vs code
+===========================================================================================================================
 flutter doctor -v
 flutter clean
 flutter upgrade
 flutter config --enable-web
 flutter channel master
+
+exit
+or
+flutter upgrade
+flutter pub get
+flutter build web
+
 ===========================================================================================================================
 ===========================================================================================================================
-jika error 
+if (error) 
 
 Launching lib\main.dart on Chrome in debug mode... 
 Failed to establish connection with the application instance in Chrome.
